@@ -1,0 +1,919 @@
+@import url(icon/remixicon.css);
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*header start*/
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu .nav-item {
+    position: relative;
+    padding: 30px 45px 30px 0;
+}
+
+.nav-menu .nav-item a:hover {
+    color: red;
+}
+
+
+.nav-menu .nav-item:nth-child(4)::before {
+    position: absolute;
+    content: "HOT";
+    background: #ff003c;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 10px;
+    top: 10px;
+    right: 10px;
+    transition: all .2s ease-out 0s;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 30%);
+    padding: 3px 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.nav-menu .nav-item a {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav-menu li:last-child {
+    padding-right: 0;
+}
+
+.nested-list {
+    position: absolute;
+    width: 160px;
+    background: white;
+    left: 0;
+    border-radius: 5px;
+    list-style: none;
+    padding: 5px 0 10px 20px;
+    margin: 0;
+    visibility: hidden;
+    opacity: 0;
+    top: 85%;
+    transition: .3s ease-in;
+    border-top: 2px solid red;
+    line-height: 30px;
+}
+
+.nested-list::before {
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 0 6px 6px 6px;
+    border-color: transparent transparent red transparent;
+    top: -7px;
+}
+
+
+.nav-menu .nav-item:hover .nested-list {
+    visibility: visible;
+    opacity: 1;
+    top: 100%;
+}
+
+.nav-menu .nav-item:hover .nested-list li a:hover {
+    color: red;
+}
+
+.social-icon {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social-icon li {
+    padding-right: 20px;
+}
+
+.social-icon li:hover {
+    color: red;
+    transition: .6s ease;
+
+}
+
+/*header end*/
+.main {
+    background-color: #f0f0f2;
+    overflow: hidden;
+}
+
+
+.main-text {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.main-heading {
+    color: #0b1c39;
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 26px;
+}
+
+.main-paragraph {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.6;
+    font-weight: 400;
+    margin-bottom: 39px;
+    color: #212025;
+    margin-bottom: 60px;
+    padding-right: 50px;
+}
+
+.time1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: beat 1s infinite alternate;
+    animation-delay: 0.6s ease;
+    width: 100%;
+}
+
+/* Heart beat animation */
+@keyframes beat {
+    to {
+        transform: scale(1.05);
+    }
+}
+
+.shop-btn {
+    position: relative;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background: #4a4a4b;
+    color: white;
+    border-radius: 2px;
+    font-family: 'Josefin Sans', sans-serif;
+    border: none;
+    z-index: 1;
+}
+
+
+.new-arrival {
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+
+.new {
+    padding-bottom: 50px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.product img {
+    transition: all .4s ease-out 0s;
+    transform: scale(1);
+    width: 100%;
+}
+
+.product img:hover {
+    transform: scale(1.05);
+
+}
+
+.product {
+    overflow: hidden;
+}
+
+.product-text {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 40px;
+
+}
+
+.product-text h4 {
+    color: #444444;
+    font-weight: 700;
+    font-size: 24px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.last-product {
+    object-fit: cover;
+}
+
+.product-text span {
+    color: red;
+}
+
+.galleries {
+    overflow: hidden;
+}
+
+.galleries {
+    height: 100%;
+}
+
+.galleries img:hover {
+    transform: scale(1.05);
+}
+
+.galleries img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    transition: all .4s ease-out 0s;
+    transform: scale(1);
+}
+
+.gallery-half img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .4s ease-out 0s;
+    transform: scale(1);
+}
+
+.gallery-half img:hover {
+    transform: scale(1.05);
+
+}
+
+.galleries-d {
+    height: calc(100% + 24px);
+    margin-bottom: -24px;
+}
+
+.gallery-half {
+    height: calc(50% - 24px);
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.popular {
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+
+.popular-heading {
+    text-align: center;
+}
+
+.popular-content {
+    padding-bottom: 60px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.popular-heading h4 {
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.popular-heading p {
+    font-size: 18px;
+    color: #777;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+
+.product-price {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.product-price h4 {
+    font-weight: 700;
+}
+
+.product-watches {
+    position: relative;
+    border-bottom: 4px solid red;
+}
+
+.product-watches img {
+    width: 100%;
+}
+
+.product-watches .heart-icon {
+    position: absolute;
+    right: 25px;
+    top: 30px;
+    color: black;
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s ease-in-out
+}
+
+.product-watches:hover .heart-icon {
+    visibility: visible;
+    opacity: 1;
+}
+
+.product-watches .heart-icon i {
+    font-size: 35px;
+}
+
+.red-lable {
+    position: absolute;
+    background-color: red;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    bottom: 0px;
+    width: 100%;
+    height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s ease-in-out;
+}
+
+.product-watches:hover .red-lable {
+    visibility: visible;
+    opacity: 1;
+    height: 65px;
+
+
+}
+
+
+.product-watches .more {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-family: "Roboto", sans-serif;
+}
+
+.more {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-more {
+
+    background: #ff2020;
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 30px 28px;
+    border-radius: 0px;
+    display: inline-block;
+    line-height: 0;
+    border: 0;
+    border: none;
+    z-index: -1;
+    position: relative;
+}
+
+.banner-watch {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-image: url("./Images/newpic.png");
+    background-size: cover;
+    height: 70vh;
+    margin-bottom: 60px;
+
+}
+
+.choice-content {
+    font-family: 'Josefin Sans';
+
+}
+
+.choice-content h2 {
+    color: #000;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 40px;
+}
+
+.choice-content p {
+    font-family: "Roboto", sans-serif;
+    color: #777;
+    line-height: 30px;
+    font-size: 17px;
+    font-weight: normal;
+    padding-right: 20px;
+    margin-bottom: 40px;
+}
+
+.choice-btn {
+    background: #ff2020;
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 30px 28px;
+    border-radius: 0px;
+    display: inline-block;
+    line-height: 0;
+    border: 0;
+    border: none;
+    z-index: -1;
+    position: relative;
+}
+
+.choice-watches {
+    text-align: center;
+}
+
+.choice-watches img {
+    width: 85%;
+}
+
+.choice {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.choices {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.ship-method {
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.payement-system {
+    background-color: #ea0000;
+
+}
+
+.information {
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+.icon {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.icon i {
+    font-size: 40px;
+    font-weight: 900;
+    color: white;
+    padding-top: 20px;
+}
+
+.icon-text {
+    line-height: 35px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+.icon-text h5 {
+    font-weight: 900;
+}
+
+.icon-text p {
+    color: #d3d1d1;
+    font-size: 16px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+}
+
+.footer-main {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.footer-logo {
+    padding-bottom: 40px;
+}
+
+.footer-main-text {
+    font-size: 16px;
+    line-height: 30px;
+    color: #777;
+    padding-right: 30px;
+}
+
+.footer-logo li {
+    list-style: none;
+}
+
+.footer-logo h4 {
+    margin-bottom: 30px;
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-family: "Roboto", sans-serif;
+}
+
+.footer-logo li a {
+    text-decoration: none;
+    color: #868c98;
+    transition: all .3s ease-out 0s;
+}
+
+.footer-logo ul li a:hover {
+    color: #ea0000;
+    transition: all .3s ease-out 0s;
+    padding-left: 5px;
+}
+
+.footer-logo ul {
+    padding: 0;
+    margin: 0;
+
+    line-height: 40px;
+
+}
+
+.footer-social-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.social-icons {
+    padding-right: 20px;
+}
+
+.footer-last-line p {
+    font-size: 19px;
+    color: #868c98;
+}
+
+.footer-last-line p a {
+    color: #ea0000;
+    text-decoration: none;
+}
+
+.footer-content {
+    padding-bottom: 120px;
+}
+
+.scrollUp {
+    background: #ff2020;
+    height: 50px;
+    width: 50px;
+    right: 31px;
+    bottom: 18px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 48px;
+    border: 2px solid transparent;
+    position: fixed;
+    z-index: 2147483647;
+    display: block;
+}
+
+.shop-btn:hover::before {
+    width: 100%;
+
+}
+
+.shop-btn::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 0;
+    background-color: #ff2020;
+    left: 0;
+    top: 0;
+    transition: .4s ease-in-out;
+    z-index: -1;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+
+.btn-more::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 0;
+    background-color: #ff2020;
+    left: 0;
+    top: 0;
+    transition: .4s ease-in-out;
+    z-index: -1;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+
+.btn-more:hover::before {
+    background-color: #635c5c;
+    width: 100%;
+}
+
+.choice-btn::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 0;
+    background-color: #ff2020;
+    left: 0;
+    top: 0;
+    transition: .4s ease-in-out;
+    z-index: -1;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+
+
+.choice-btn:hover::before {
+    background-color: #635c5c;
+    width: 100%;
+}
+
+.logo:hover {
+    color: #ea0000;
+}
+
+.social-icons:hover {
+    color: #ea0000;
+}
+
+.product-price span:hover {
+    color: #ea0000;
+}
+
+.product-text span:hover {
+    color: green;
+}
+
+.toggside {
+    display: none;
+    z-index: 1;
+
+}
+
+.sidepanel {
+    height: 100vh;
+    /* Specify a height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: #111;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    background-color: lightgray;
+    /* 0.5 second transition effect to slide in the sidepanel */
+    z-index: 1;
+}
+
+/* The sidepanel links */
+.sidepanel a {
+    padding: 0px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+    display: flex;
+    font-family: 'Comic Neue';
+    letter-spacing: 1px;
+    line-height: 50px;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    color: black;
+    border-radius: 5px;
+    padding: 3px 10px;
+    border: 2px solid black;
+}
+
+
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+    box-shadow: 0 0 10px 0;
+}
+
+.header-logos {
+    padding-right: 53px;
+}
+
+@media(max-width:1200px) {
+    .main-heading {
+        font-size: 79px;
+    }
+
+    .main-paragraph {
+        font-size: 15px;
+    }
+
+    .banner-watch {
+        height: 60vh;
+    }
+}
+
+@media(max-width:1025px) {
+    .banner-watch {
+        height: 50vh;
+    }
+}
+
+@media(max-width:991px) {
+    .cus-dnone {
+        display: none;
+    }
+
+    .main-heading {
+        font-size: 96px;
+    }
+
+    .main-paragraph {
+        font-size: 20px;
+    }
+
+    .choice-content h2 {
+        font-size: 40px;
+        margin-bottom: 18px;
+
+    }
+
+    .choice-content p {
+        margin-bottom: 20px;
+        font-size: 17px;
+    }
+
+    .choice-watches img {
+        width: 100%;
+    }
+
+    .icon-text h5 {
+        font-size: 23px;
+    }
+
+    .footer-logo ul {
+        line-height: 46px;
+    }
+
+    .toggside {
+        display: block !important;
+        z-index: 2;
+        position: fixed;
+        top: 15px;
+        right: 12px;
+
+    }
+
+    .sidepanel {
+        top: 66px;
+    }
+
+    .header {
+        padding: 20px 0;
+    }
+}
+
+@media(max-width:768px) {
+    .banner-watch {
+        height: 40vh;
+    }
+
+    .time1 {
+        width: 52%;
+    }
+
+    .main-heading {
+        font-size: 88px;
+    }
+
+}
+
+@media(max-width:767px) {
+    .main-heading {
+        font-size: 64px;
+    }
+
+    .information {
+        padding-top: 10px;
+    }
+
+    .footer-main {
+        padding-top: 0;
+        padding-bottom: 20px;
+    }
+}
+
+@media(max-width:560px) {
+    .time1 img {
+        display: none;
+    }
+
+    .cus-dnone1 {
+        display: none;
+    }
+
+    .main-heading {
+        padding-top: 20px;
+        font-size: 50px;
+    }
+
+    .main-paragraph {
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+
+    .shop-btn {
+        margin-bottom: 20px;
+    }
+
+    .banner-watch {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        height: 33vh;
+    }
+}
+
+@media(max-width:414px) {
+    .btn-more {
+
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        padding: 20px 15px;
+    }
+
+    .banner-watch {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        height: 22vh;
+    }
+
+    .choice-content h2 {
+        font-size: 25px;
+    }
+
+    .choice-content p {
+        font-size: 12px;
+    }
+
+    .choice-btn {
+        font-size: 12px;
+        padding: 23px 12px;
+    }
+
+}
+
+@media (max-width: 320px) {
+
+    .banner-watch {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        height: 18vh;
+    }
+}
